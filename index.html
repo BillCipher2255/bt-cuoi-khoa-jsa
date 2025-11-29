@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
     <!-- NAVBAR-->
-    <header class="navber">
-        <div class="logo">Game<span class="hightlight">store</span></div>
+    <header class="navbar">
+        <div class="logo">Game<span class="hight-light">store</span></div>
         <div class="naw-actions">
             <input type="text" id="search-input" placeholder="Search game you want..">
             <button id="search-game">
@@ -33,13 +34,13 @@
                 class="exlport-bth"
                 onclick="document.querySelector('.game-list-section').scrollIntoView({ behavior: 'smooth'})"
                 >
-                    Exlport Movies
+                    Exlport Game
             </button>
         </div>
      </section>
 
      <!-- Poupular Game -->
-      <main class=".game-list-section">
+      <main class="game-list-section">
         <div class="game-genre">
             <h2>Poupular Game</h2>
             <div class="game-slider-container">
@@ -47,7 +48,7 @@
                     <i class="bi bi-arrow-bar-left"></i>
                 </button>
                 <div id="now-playing" class="game-slider"></div>
-                <button class="bi bi-narrow-bar-right">
+                <button class="scroll-bth right">
                     <i class="bi bi-arrow-bar-right"></i>
                 </button>
             </div>
@@ -62,7 +63,7 @@
                     <i class="bi bi-arrow-bar-left"></i>
                 </button>
                 <div id="now-playing" class="game-slider"></div>
-                <button class="bi bi-narrow-bar-right">
+                <button class="scroll-bth right">
                     <i class="bi bi-arrow-bar-right"></i>
                 </button>
             </div>
@@ -77,7 +78,7 @@
                     <i class="bi bi-arrow-bar-left"></i>
                 </button>
                 <div id="now-playing" class="game-slider"></div>
-                <button class="bi bi-narrow-bar-right">
+                <button class="scroll-bth right">
                     <i class="bi bi-arrow-bar-right"></i>
                 </button>
             </div>
@@ -93,6 +94,8 @@
         </div>
        </footer>
 
+       <!-- FILE SCRIPT -->
+        <script src="./script/index.js"></script>
 
 </body>
 </html>
