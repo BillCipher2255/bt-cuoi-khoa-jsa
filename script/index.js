@@ -16,6 +16,7 @@ const TMDB_API_KEY = "95363966f0944c3a99ddd0b43ea0d626"
 const BASE_URL = "https://rawg.io/"
 const IMG_URL = ""
 
+
 function fetch_game(url, container_id) {
     fetch(`${BASE_URL}${url}?api_key=${TMDB_API_KEY}`)
         .then((res) => res.json())

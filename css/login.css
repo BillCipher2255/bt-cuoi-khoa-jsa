@@ -1,0 +1,8 @@
+.forn-wrapper{
+    display: block;
+    align-items: stretch;
+    gap: 100px;
+    justify-content: center;
+    border: 1px solid;
+
+}
