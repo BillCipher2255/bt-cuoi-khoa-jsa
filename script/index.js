@@ -12,36 +12,34 @@ fetch(`${BASE_URL}${url}?key=${API_KEY}`)
 // ---------------------
 // Hàm fetch_game CHUẨN
 // ---------------------
-function fetch_game(url, containerid) {
+    function fetch_game(url, containerid) {
 
-    fetch(`${url}?key=${API_KEY}`)
-        .then(res => res.json())
-        .then(data => {
-            const container = document.getElementById(containerid);
+        fetch(`${BASE_URL}${url}?key=${API_KEY}`)
+            .then(res => res.json())
+            .then(data => {
+                const container = document.getElementById(containerid);
 
-            for (let i = 0; i < data.results.length; i++) {
-                let game = data.results[i];
+                for (let i = 0; i < data.results.length; i++) {
+                    let game = data.results[i];
 
-                let div = document.createElement('div');
-                div.className = "game-card";
+                    let div = document.createElement('div');
+                    div.className = "game-card";
 
-                div.innerHTML = `
-                    <img src="${game.background_image}" />
-                    <p>${game.name}</p>
-                `;
+                    div.innerHTML = `
+                        <img src="${game.background_image}" />
+                        <p>${game.name}</p>
+                    `;
 
-                div.addEventListener("click", () => {
-                    window.location.href = "../";
-                });
+                    div.addEventListener("click", () => {
+                        window.location.href = "../";
+                    });
 
-                container.appendChild(div);
-            }
-        })
-        .catch(err => console.error(err));
-}
+                    container.appendChild(div);
+                }
+            })
+            .catch(err => console.error(err));
+    }
 
 
-// ---------------------
-// Gọi hàm đúng CÁCH
-// ---------------------
-fetch_game("https://api.rawg.io/api/games", "Upcoming-game");
+
+fetch_game("/games", "now-playing");

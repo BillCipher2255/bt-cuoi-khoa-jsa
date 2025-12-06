@@ -1,4 +1,8 @@
 /* welcome */
+*{
+    background-color: black;
+}
+
 .wellcome-sectione{
     position: absolute;
     inset: 0;
@@ -20,7 +24,6 @@
     margin-bottom :16px; 
     letter-spacing: 0.5px;
     position: relative;
-    display: inline-block;
 }                                                                                                   
 
 .wellcome-sbutitle{
@@ -49,4 +52,64 @@
 .wellcome-content:hover .wellcome-title:hover{
     width: 120px;
     transition: width 0.4s ease;
+}
+
+
+.navbar{
+    display: flex   ;
+    gap: 500px;
+    justify-content: center;
+    gap: 980px;
+}
+.naw-actions {
+    display: flex;
+    gap: 16px;
+
+}
+
+.hight-light{
+    color: red;
+    font-size: 50px;
+}
+.logo{
+    color: white;
+    font-size:  50px;
+}
+
+.search-input{
+    height: 30px;
+    border:  1px white solid;
+    border-radius: 50px;   
+    color: white;
+}
+
+.search-input:hover{
+    border:  1px red solid;
+}
+
+.search-game{
+    width: 35px;
+    height: 35px;
+    color: white;
+    border-radius: 10px; 
+    border:  1px white solid;
+
+}
+
+.log-in-buttons i {
+    font-size: 30px; /* Thay đổi kích thước icon */
+    color: white; /* Thay đổi màu icon thành xanh dương */
+    margin-right: 5px; /* Thêm khoảng cách nếu cần */
+    border:  1px white solid;
+    border-radius: 10px;    
+}
+
+
+input::placeholder {
+  color: white; /* Màu chữ gợi ý */
+  opacity: 10 /* Đảm bảo độ mờ (opacity) là 1 để màu hiển thị rõ, vì một số trình duyệt mặc định đặt opacity thấp hơn */
+}
+
+.wellcome-section{
+    text-align: center;
 }

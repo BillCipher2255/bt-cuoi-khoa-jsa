@@ -9,22 +9,20 @@
 </head>
 <body>
     <!-- NAVBAR-->
-    <header class="navbar">
+    <div class="navbar">
         <div class="logo">Game<span class="hight-light">store</span></div>
+        
         <div class="naw-actions">
-            <input type="text" id="search-input" placeholder="Search game you want..">
-            <button id="search-game">
-                <i class="bi bi-person-fill"></i>
+            <input  type="text" id="search-input" class="search-input" placeholder="  Search game you want..">
+            <button id="search-game" class="search-game">
+                <i class="bi bi-search"></i>
             </button>
-            <div id="avatar-contanier">
-                <a href="./login.html"><i class="fa-solid fa-user-circle"></i></a>
-            </div>
-
+            <a href="./login.html" class="log-in-buttons"><i class="bi bi-person-fill"></i></a>
         </div>
-    </header>
+    </div>
 
     <!-- WELLCOME -->
-     <section class="wellcome-section">
+     <div class="wellcome-section">
         <div class="wellcome-content">
             <h1 class="wellcome-title">Welcome to game store</h1>
             <p class="wellcome-sbutitle">
@@ -32,58 +30,20 @@
             </p>
             <button
                 class="exlport-bth"
-                onclick="document.querySelector('.game-list-section').scrollIntoView({ behavior: 'smooth'})"
-                >
+                onclick="document.querySelector('.game-list-section').scrollIntoView({ behavior: 'smooth'})">
                     Exlport Game
             </button>
         </div>
-     </section>
+     </div>
 
      <!-- Poupular Game -->
-      <main class="game-list-section">
+      <div class="game-list-section">
         <div class="game-genre">
             <h2>Poupular Game</h2>
-            <div class="game-slider-container">
-                <button class="scroll-bth left">
-                    <i class="bi bi-arrow-bar-left"></i>
-                </button>
-                <div id="now-playing" class="game-slider"></div>
-                <button class="scroll-bth right">
-                    <i class="bi bi-arrow-bar-right"></i>
-                </button>
-            </div>
+            <div id="now-playing" class="game-slider"></div>
         </div>
-      </main>
-      <!-- Top Game-->
-      <main class=".game-list-section">
-        <div class="game-genre">
-            <h2>Top Game</h2>
-            <div class="game-slider-container">
-                <button class="scroll-bth left">
-                    <i class="bi bi-arrow-bar-left"></i>
-                </button>
-                <div id="now-playing" class="game-slider"></div>
-                <button class="scroll-bth right">
-                    <i class="bi bi-arrow-bar-right"></i>
-                </button>
-            </div>
-        </div>
-      </main>  
-      <!-- Upcoming game-->
-      <main class=".game-list-section">
-        <div class="game-genre">
-            <h2>Upcoming game</h2>
-            <div class="game-slider-container">
-                <button class="scroll-bth left">
-                    <i class="bi bi-arrow-bar-left"></i>
-                </button>
-                <div id="now-playing" class="game-slider"></div>
-                <button class="scroll-bth right">
-                    <i class="bi bi-arrow-bar-right"></i>
-                </button>
-            </div>
-        </div>
-      </main>  
+      </div>
+
       <!-- FOOTER -->
        <footer>
         <p>&copy;2025 BILL CIPHER</p>
