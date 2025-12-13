@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,55 +8,59 @@
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+
 <body>
     <!-- NAVBAR-->
     <div class="navbar">
         <div class="logo">Game<span class="hight-light">store</span></div>
-        
+
         <div class="naw-actions">
-            <input  type="text" id="search-input" class="search-input" placeholder="  Search game you want..">
-            <button id="search-game" class="search-game">
-                <i class="bi bi-search"></i>
-            </button>
+            <div class="sreach">
+                <input type="text" id="search-input" class="search-input" placeholder="Search game you want..">
+                <button id="search-game" class="search-game">
+                    <i class="bi bi-search logo-login"></i>
+                </button>
+            </div>
             <a href="./login.html" class="log-in-buttons"><i class="bi bi-person-fill"></i></a>
         </div>
     </div>
 
     <!-- WELLCOME -->
-     <div class="wellcome-section">
+    <div class="wellcome-section">
         <div class="wellcome-content">
             <h1 class="wellcome-title">Welcome to game store</h1>
             <p class="wellcome-sbutitle">
                 Discover trending, poupular, top-rate game - all in one web.
             </p>
-            <button
-                class="exlport-bth"
+            <button class="exlport-bth"
                 onclick="document.querySelector('.game-list-section').scrollIntoView({ behavior: 'smooth'})">
-                    Exlport Game
+                Exlport Game
             </button>
         </div>
-     </div>
+    </div>
 
-     <!-- Poupular Game -->
-      <div class="game-list-section">
+    <!-- Poupular Game -->
+    <div class="game-list-section">
         <div class="game-genre">
-            <h2>Poupular Game</h2>
+            <h2 class="poupalar-game">Poupulaer Game</h2>
             <div id="now-playing" class="game-slider"></div>
         </div>
-      </div>
+    </div>
 
-      <!-- FOOTER -->
-       <footer>
+    <!-- FOOTER -->
+    <footer>
         <p>&copy;2025 BILL CIPHER</p>
         <div class="footer-links">
             <a href="#"><i class="bi bi-github"></i></a>
             <a href="#"><i class="bi bi-facebook"></i></a>
             <a href="#"><i class="bi bi-instagram"></i></a>
         </div>
-       </footer>
+    </footer>
 
-       <!-- FILE SCRIPT -->
-        <script src="./script/index.js"></script>
+    <!-- FILE SCRIPT -->
+    <script src="./script/index.js"></script>
+    <script src="./script/search.js"></script>
 
 </body>
+
 </html>

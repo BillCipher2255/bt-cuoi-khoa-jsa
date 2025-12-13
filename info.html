@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Info | MindX Cinema</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/info.css" />
+</head>
+
+<body>
+  <!-- ========== NAVBAR ========== -->
+    <header class="navbar">
+      <div class="logo">Movie<span class="highlight">hub</span></div>
+      <div class="nav-actions">
+        <input type="text" id="search-input" placeholder="Search movies..." />
+        <button id="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <div id="avatar-container">
+          <a href="./login.html"><i class="fa-solid fa-user-circle"></i></a>
+        </div>
+      </div>
+    </header>
+
+  <main class="info-container">
+
+    <!-- POSTER + DESCRIPTION -->
+    <section class="movie-info">
+      <div class="poster">
+        <img id="preview-img" alt="Poster" />
+      </div>
+
+      <div class="details">
+        <h1 id="movie-title"></h1>
+        <p id="release-date"></p>
+        <p id="movie-description"></p>
+
+        <div id="genres" class="genres"></div>
+
+        <a id="watch-now-btn" class="btn">
+          <i class="fa-regular fa-circle-play"></i> Watch Now
+        </a>
+      </div>
+    </section>
+
+    <!-- CASTS -->
+    <section class="casts">
+      <h2>Casts</h2>
+      <div class="casts-grid" id="casts-grid"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MindX School</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./scripts/info.js"></script>
+</body>
+</html>
