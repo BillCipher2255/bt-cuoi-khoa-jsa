@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Background (bạn có thể thay ảnh) */
+body {
+  min-height: 100vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("bg.jpg") center/cover no-repeat;
+}
+
+/* Center form */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Box giống ảnh */
+.auth-box {
+  width: 380px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.auth-box h2 {
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.auth-box input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Button */
+.auth-box button {
+  width: 60%;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  background: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-box button:hover {
+  background: #e5e7eb;
+}
+
+.submit:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+}
+
+
+
+/* Switch link */
+.switch {
+  margin-top: 18px;
+  color: #d1d5db;
+  font-size: 14px;
+}
+
+.switch a {
+  color: #fff;
+  text-decoration: underline;
+}
