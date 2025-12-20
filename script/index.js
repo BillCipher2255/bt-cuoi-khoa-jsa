@@ -31,7 +31,7 @@ fetch(`${BASE_URL}${url}?key=${API_KEY}`)
                     `;
 
                     div.addEventListener("click", () => {
-                        window.location.href = "../";
+                        window.location.href = `../info.html?id=${game.id}`;
                     });
 
                     container.appendChild(div);

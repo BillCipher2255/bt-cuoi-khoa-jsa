@@ -141,6 +141,11 @@ body {
     text-align: center;
 }
 
+.hero-bg {
+
+  object-fit: cover;      /* phủ kín, không méo */
+  z-index: 1;             /* nằm dưới */
+}
 /* ================= FOOTER ================= */
 footer {
     border-top: 1px solid #222;

@@ -86,7 +86,7 @@ body {
 
 
 .poster img {
-  width: 320px;
+  width: 500px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
@@ -224,4 +224,11 @@ footer {
   .details {
     text-align: center;
   }
+}
+
+
+/* DESCRIPTION */
+
+.game-description{
+  text-align: justify;
 }

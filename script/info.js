@@ -1,56 +1,34 @@
-const TMDB_API_KEY = "ca75115bc2b339d29d236aac176376d8";
-const BASE_URL = "https://api.themoviedb.org/3/movie";
-const IMG_URL = "https://image.tmdb.org/t/p/w300";
+
+
+const API_KEY = "95363966f0944c3a99ddd0b43ea0d626";
+const API_BASE_URL = "https://api.rawg.io/api/games";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const movie_id = params.get("id");
+  const params = new URLSearchParams(window.location.search); // sửa s1xearch -> search
+  const game_id = params.get("id");
 
-  //===== 1. Movie details =====
-  fetch(`${BASE_URL}/${movie_id}?api_key=${TMDB_API_KEY}`)
+  //===== 1. Game details =====
+  fetch(`${API_BASE_URL}/${game_id}?key=${API_KEY}`)
     .then((res) => res.json())
     .then((data) => {
-      // Ảnh phim
-      document.getElementById("preview-img").src = IMG_URL + data.poster_path;
+      // Ảnh game
+      document.getElementById("preview-img").src = data.background_image || "";
 
-      // Tiêu đề phim
-      document.getElementById("movie-title").textContent = data.title;
+      // Tên game
+      document.getElementById("name").textContent = data.name;
 
-      // Ngày phát hành phim
-      document.getElementById("release-date").innerHTML = `
-      Release date: ${data.release_date}`;
+      // Ngày phát hành
+      document.getElementById("release-date").textContent = `Release date: ${data.released || "Unknown"}`;
 
-      // Mô tả phim
-      document.getElementById("movie-description").textContent = data.overview;
+      // Mô tả game
+      document.getElementById("game-description").textContent = data.description_raw || "No description available.";
 
-      // Thể loại phim
+      // Thể loại game
       const genres_box = document.getElementById("genres");
-      for (let i = 0; i < data.genres.length; i++) {
-        genres_box.innerHTML += `<span class="genre-tag">${data.genres[i].name}</span>`;
-      }
+      genres_box.innerHTML = ""; // reset trước khi thêm
+      data.genres.forEach((genre) => {
+        genres_box.innerHTML += `<span class="genre-tag">${genre.name}</span>`;
+      });
     })
     .catch((err) => console.error(err));
-
-  //===== 2. Movie casts =====  
-  fetch(`${BASE_URL}/movie/${movie_id}/credits?api_key=${TMDB_API_KEY}`)
-    .then((res) => res.json())
-    .then((data) => {
-      const castGrid = document.getElementById("casts-grid");
-      castGrid.innerHTML = "";
-
-      const casts = data.cast.slice(0, 12); // Lấy 12 cast đầu
-
-      for (let i = 0; i < casts.length; i++) {
-        const cast = casts[i];
-
-        castGrid.innerHTML += `
-          <div class="cast-card">
-            <img src="${IMG_URL + cast.profile_path}" alt="${cast.name}">
-            <p class="cast-name">${cast.name}</p>
-            <p class="cast-role">${cast.character || ""}</p>
-          </div>
-        `;
-      }
-    })
-    .catch((err) => console.error("Lỗi tải casts:", err));
 });
