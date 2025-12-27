@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Movie Info | MindX Cinema</title>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="./css/info.css" />
+  <link rel="stylesheet" href="./css/home.css">
 
 </head>
 
 <body>
   <!-- ========== NAVBAR ========== -->
-    <header class="navbar">
-      <div class="logo">Game<span class="highlight">Store</span></div>
-      <div class="nav-actions">
-        <input type="text" id="search-input" placeholder="Search movies..." />
-        <button id="search-btn">
-          <i class="fa-solid fa-magnifying-glass"></i>
+  <div class="navbar">
+    <div class="logo">Game<span class="hight-light">store</span></div>
+
+    <div class="naw-actions">
+      <div class="sreach">
+        <input type="text" id="search-input" class="search-input" placeholder="Search game you want..">
+        <button id="search-game" class="search-game">
+          <i class="bi bi-search logo-login"></i>
         </button>
-        <div id="avatar-container">
-          <a href="./login.html"><i class="fa-solid fa-user-circle"></i></a>
-        </div>
       </div>
-    </header>
+      <a href="./login.html" class="log-in-buttons"><i class="bi bi-person-fill"></i></a>
+    </div>
+  </div>
+
+
 
   <main class="info-container">
 
@@ -31,30 +37,23 @@
     <section class="movie-info">
       <div class="poster">
         <img id="preview-img" alt="Poster" />
+        <div class="detail-2">
+          <h1 id="name"></h1>
+          <p id="parent_platforms"></p>
+          <p id="release-date"></p>
+          <p id="developers"></p>
+          <p id="updated"></p>
+          <p id="genres" class="genres">Category</p>
+        </div>
       </div>
-
+        <br><br>
       <div class="detail">
-        <h1 id="name"></h1>
-        <p id="parent_platforms"></p>
-        <p id="release-date"></p>
-        <p id="developers"></p>
-        <p id="updated"></p>
-        <p id="game-description" class="game-description"></p>
         <p id="short_screenshots"></p>
-
-        <div id="genres" class="genres"></div>
-
-        <a id="play-now" class="btn">
-          <i class="fa-regular fa-circle-play"></i> Buy Now
-        </a>
       </div>
-    </section>
-
-    <!-- CASTS -->
-    <section class="casts">
-      <h2>Casts</h2>
-      <div class="casts-grid" id="casts-grid"></div>
-    </section>
+      <p id="game-description" class="game-description"></p>
+      <a id="play-now" class="btn">
+        <i class="fa-regular fa-circle-play"></i> Buy Now
+      </a>
 
   </main>
 
@@ -65,4 +64,5 @@
   <!-- Scripts -->
   <script src="./script/info.js"></script>
 </body>
+
 </html>

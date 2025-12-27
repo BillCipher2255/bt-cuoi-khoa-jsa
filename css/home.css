@@ -142,9 +142,10 @@ body {
 }
 
 .hero-bg {
-
-  object-fit: cover;      /* phủ kín, không méo */
-  z-index: 1;             /* nằm dưới */
+    
+    height: 440px;
+    object-fit: cover;      /* phủ kín, không méo */
+    z-index: 1;             /* nằm dưới */
 }
 /* ================= FOOTER ================= */
 footer {

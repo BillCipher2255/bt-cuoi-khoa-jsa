@@ -15,6 +15,7 @@ form.addEventListener("submit", (e) => {
     let username = document.getElementById("username").value.trim();
     let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value.trim();
+    let cf_password= document.getElementById("cf_password").value.trim();
 
     /**
     Kiểm tra độ mạnh mật khẩu
@@ -32,11 +33,16 @@ form.addEventListener("submit", (e) => {
         - Nếu bất kỳ điều kiện nào không đạt, hiển thị thông báo lỗi qua alert() và dừng lại (không đăng ký).
         - Chỉ khi tất cả hợp lệ mới tiếp tục.
      */
+    
     if (username.length < 6) {
         alert("Username must be at least 6 characters");
     }
     else if (password.length < 8) {
         alert("Password must be at least 8 characters");
+    }
+    else if (password != cf_password){
+        alert("passwords do not match")
+
     }
     else if (!password.match(lower_case_letter)){
         alert("Password must contain a lowercase letter")
@@ -84,6 +90,5 @@ form.addEventListener("submit", (e) => {
          */
         alert("User created successfully, please login");
         location.href = "../login.html";
-
     }
 })

@@ -71,7 +71,7 @@ body {
 }
 
 .movie-info {
-  display: flex;
+  
   gap: 40px;
   margin-top: 20px;
   align-items: flex-start;
@@ -84,7 +84,10 @@ body {
 }
 
 
-
+.poster{
+  display: flex;
+  gap: 30px;
+}
 .poster img {
   width: 500px;
   border-radius: 12px;
@@ -232,3 +235,4 @@ footer {
 .game-description{
   text-align: justify;
 }
+
