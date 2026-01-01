@@ -10,7 +10,6 @@ body {
   min-height: 100vh;
   background: 
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("bg.jpg") center/cover no-repeat;
 }
 
 /* Center form */
@@ -82,3 +81,38 @@ body {
   text-decoration: underline;
 }
 
+/* backgorud */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+
+
+.login-box {
+  position: relative;
+  z-index: 1;
+}
+
+
+.logo {
+  position: fixed;
+  top: 24px;
+  left: 32px;
+  color: #9ad7ff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none; /* bỏ gạch chân link */
+  cursor: pointer;       /* con trỏ chuột khi hover */
+}
+
+.logo:hover {
+  color: #66b3ff; /* đổi màu khi hover cho đẹp */
+}

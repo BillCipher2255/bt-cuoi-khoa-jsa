@@ -1,0 +1,109 @@
+/* Reset cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.payment-container {
+    background: #222;
+    padding: 40px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.payment-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0ff;
+}
+
+.payment-form label {
+    display: block;
+    margin: 15px 0 5px;
+}
+
+.payment-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.payment-form input[readonly] {
+    background: #333;
+    color: #ccc;
+}
+
+.pay-button {
+    display: block;
+    text-align: center;
+    background: #0ff;
+    color: #000;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.pay-button:hover {
+    background: #0cc;
+}
+
+/* Ẩn thông báo mặc định */
+.success-message {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    color: #0f0;
+    font-weight: bold;
+}
+
+/* Khi checkbox được check, hiện thông báo */
+#pay-btn:checked + .pay-button + .success-message {
+    display: block;
+}
+
+.logo {
+  position: fixed;
+  top: 24px;
+  left: 32px;
+  color: #9ad7ff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none; /* bỏ gạch chân link */
+  cursor: pointer;       /* con trỏ chuột khi hover */
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Đẩy xuống dưới cùng */
+}
+
+/* Đảm bảo body không có nền màu để thấy được Vanta bên dưới */
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent; /* Xóa gradient cũ hoặc để transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore Payment</title>
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="icon" href="./assets/game.png" type="image/x-icon" />
+
+</head>
+<body>
+    <div id="bg"></div>
+    <div class="payment-container">
+        
+        
+        <h1>Checkout</h1>
+        <a href="index.html" class="logo">GAME STORE</a> 
+
+        <form class="payment-form">
+            <label for="game-name">Game:</label>
+            <input type="text" id="price" placeholder="Game" required>
+
+            <label for="price">Price:</label>
+            <input type="text" id="price" placeholder="Enter price" required>
+
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+
+            <label for="expiry">Expiry Date:</label>
+            <input type="text" id="expiry" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" placeholder="123" required>
+
+            <!-- Checkbox ẩn trigger thông báo -->
+            <input type="checkbox" id="pay-btn" hidden>
+            <label for="pay-btn" class="pay-button">Pay Now</label>
+
+            <!-- Thông báo hiển thị khi nhấn nút -->
+            <div class="success-message">Payment Successful ✅ </div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="./script/payment.js"></script>
+</body>
+</html>
