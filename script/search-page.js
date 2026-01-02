@@ -33,3 +33,10 @@ function fetch_game(query) {
     })
     .catch(err => console.error(err));
 }
+
+if (keyword.trim()) {
+  search_title.textContent = `Search results for: "${keyword}"`;
+  fetch_game(keyword);
+} else {
+  search_title.textContent = "Type something to search.";
+}

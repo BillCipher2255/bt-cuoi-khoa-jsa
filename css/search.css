@@ -14,7 +14,7 @@
   gap: 20px;
 }
 
-.game-card {
+.movie-card {
   cursor: pointer;
   text-align: center;
   transition: transform 0.2s ease;
